@@ -6,10 +6,9 @@ h1{
   color: white;
   text-align: center;
 }
-.swatches{
+.main-content{
   flex-wrap: wrap;
   display: flex;
-
   justify-content: center;
 }
 .color-number{
