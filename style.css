@@ -1,0 +1,26 @@
+body{
+  background-color: rgb(10, 10, 10);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+h1{
+  color: white;
+  text-align: center;
+}
+.swatches{
+  flex-wrap: wrap;
+  display: flex;
+
+  justify-content: center;
+}
+.color-number{
+  background-color: pink;
+  border-radius: 2px;
+  width: 250px;
+  color: white;
+  text-shadow: 2px 2px 4px rgb(0, 0, 0, 0.5);
+  text-align: end;
+  padding: 10px;
+  font-size: 30px;
+  height: 200px;
+  margin: 10px;
+}
