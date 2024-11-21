@@ -1,8 +1,8 @@
 body{
-  background-color: rgb(10, 10, 10);
+  background-color:#0a0a0a;
   }  
 h1{
-  color: rgba(63, 55, 131, 0.863);
+  color: #caf3cc;
   line-height: 1.5;
   font-family: "Righteous", sans-serif;
   font-weight: 400;
@@ -11,7 +11,28 @@ h1{
   letter-spacing: 4px;
   text-align: center;
 }
+button{
+  cursor: pointer;
+  border: solid rgb(187, 204, 0);
+  margin: 0 auto;
+  display: block;
+  font-family: sans-serif;
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+  padding: 12px 30px;
+  transition: .5s;
+  width: 330px;
+  border-radius: 50px;
+  background: linear-gradient(90deg, rgb(0, 102, 204) 0%, rgb(197, 0, 204) 100%);
+  }
+
+  button:hover{
+  color: rgb(255, 255, 255);
+  width: 370px;
+  opacity: 0.8;
+  }
 .main-content{
+  margin-top: 20px;
   flex-wrap: wrap;
   display: flex;
   justify-content: center;
@@ -19,12 +40,15 @@ h1{
 .color-box{
   border-radius: 2px;
   width: 250px;
+  font-family: "Righteous", sans-serif;
+  letter-spacing: 2px;
+  line-height: 1.5;
   color: white;
   text-shadow: 1px 1px 1px black;
   text-align: end;
   border: 5px solid white;
   padding: 17px;
-  font-size: 30px;
+  font-size:20px;
   height: 200px;
   margin: 10px;
 }
