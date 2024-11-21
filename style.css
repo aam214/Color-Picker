@@ -16,8 +16,7 @@ h1{
   display: flex;
   justify-content: center;
 }
-.color-number{
-  background-color: pink;
+.color-box{
   border-radius: 2px;
   width: 250px;
   color: white;

@@ -4,12 +4,12 @@ const mainContent = document.querySelector(".main-content");
 const changeColors = document.getElementById("changeColors");
 
 for (let index = 0; index < 20; index++) {
-  const colorNumber = document.createElement("div");
-  colorNumber.classList.add("color-number");
-  mainContent.appendChild(colorNumber);
+  const colorBox = document.createElement("div");
+  colorBox.classList.add("color-box");
+  mainContent.appendChild(colorBox);
 }
 
-const allColorNumbers = document.querySelectorAll(".color-number");
+const allColorBoxes = document.querySelectorAll(".color-box");
 //console.log(allColorNumbers);
 showColors();
 
@@ -19,7 +19,7 @@ changeColors.addEventListener("submit", (event) => {
 });
 
 function showColors() {
-allColorNumbers.forEach((colorNumber) => {
+allColorBoxes.forEach((colorNumber) => {
 const newCode = randomCode();
 colorNumber.style.backgroundColor ="#" + newCode;
 colorNumber.innerText = "#" + newCode;
