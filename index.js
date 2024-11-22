@@ -3,39 +3,40 @@ document.addEventListener("DOMContentLoaded", () => {
 const mainContent = document.querySelector(".main-content");
 const changeColors = document.getElementById("changeColors");
 
+
+//Create and append color boxes
 for (let index = 0; index < 20; index++) {
-  const colorBox = document.createElement("div");
-  colorBox.classList.add("color-box");
-  mainContent.appendChild(colorBox);
+const colorBox = document.createElement("div");
+colorBox.classList.add("color-box");
+mainContent.appendChild(colorBox);
 }
+//button
+changeColors.addEventListener("click", (event) => {
+event.preventDefault();
+showNewColors();
+});
 
+const showNewColors = () => {
 const allColorBoxes = document.querySelectorAll(".color-box");
-//console.log(allColorNumbers);
-showColors();
-
-changeColors.addEventListener("submit", (event) => {
-  event.preventDefault();
-  showColors();
-});
-
-function showColors() {
-allColorBoxes.forEach((colorNumber) => {
+allColorBoxes.forEach((box) => {
 const newCode = randomCode();
-colorNumber.style.backgroundColor ="#" + newCode;
-colorNumber.innerText = "#" + newCode;
+box.style.backgroundColor ="#" + newCode;
+box.innerText = "#" + newCode;
 });
 }
 
-function randomCode() {
-  const characters = "0123456789abcdef";
-  const codeLength = 6;
-  let randomColor = "";
-  for (let index = 0; index < codeLength; index++) {
-  const randomNumber = Math.floor(Math.random() * characters.length);
+const randomCode = () => {
+const characters = "0123456789abcdef";
+const codeLength = 6;
+let randomColor = "";
+for (let index = 0; index < codeLength; index++) {
+const randomNumber = Math.floor(Math.random() * characters.length);
 
-  randomColor += characters.substring(randomNumber, randomNumber +1);
-   //console.log(randomColor);
-  }
-  return randomColor;
+randomColor += characters[randomNumber];
+//console.log(randomColor);
 }
+  return randomColor;
+};
+  // Initial call to show colors
+  showNewColors();
 });
